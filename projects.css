@@ -1,1 +1,1 @@
-.projects{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-evenly}.projects a img{width:60px}.project-title img{margin-right:.2em;margin-bottom:8px;height:40px}
+.projects{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-evenly}.projects a{padding:2px}.projects a img{width:60px}.project-title img{margin-right:.2em;margin-bottom:8px;height:40px}
