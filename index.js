@@ -4,20 +4,24 @@ var currentSection;
 function animateSectionChange(sectionName) {
     let newSection = document.getElementById(`${sectionName == '' ? 'home' : sectionName}Section`);
     if (!newSection) return;
-    console.log(newSection);
 
     let dark = newSection.getAttribute('data-dark') == 'true';
     document.body.style.background = newSection.getAttribute('data-color');
     document.body.style.color = dark ? 'white' : 'black';
-    let rgbval = dark ? 0 : 255;
     requestAnimationFrame(() => {
         document.getElementById('content').style.background = `rgba(255, 255, 255, 0.45)`;
-        requestAnimationFrame(() => document.getElementById('content').style.background = `rgba(${rgbval}, ${rgbval}, ${rgbval}, 0.45)`);
+        let rgbval = dark ? 0 : 255;
+        requestAnimationFrame(() => {
+            let secondary = newSection.getAttribute('data-secondary-color')
+            if (secondary == null)
+                document.getElementById('content').style.background = `rgba(${rgbval}, ${rgbval}, ${rgbval}, 0.45)`;
+            else
+                document.getElementById('content').style.background = secondary;
+        });
     });
     setTimeout(() => {
         let sectionLinks = document.getElementsByClassName('section-link');
         for (let link of sectionLinks) {
-            console.log(link.innerHTML);
             link.classList.remove('light');
             link.classList.remove('dark');
             link.classList.add(dark ? 'dark' : 'light');

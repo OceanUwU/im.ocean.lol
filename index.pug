@@ -24,7 +24,7 @@ html
 
             include projectList
             each project in projects
-                section(id=`${project.name}Section` data-color=project.color data-dark=String(project.dark))
+                section(id=`${project.name}Section` data-color=project.color data-secondary-color=project.secondaryColor data-dark=String(project.dark))
                     h1.project-title: a(href=project.link)
                         img(src=project.logoURL)
                         span= project.title
