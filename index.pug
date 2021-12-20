@@ -3,24 +3,25 @@ html
     head
         title Ocean's website
         meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
-        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css")
         link(rel="stylesheet" href="index.css")
         link(rel="icon" href="icon.gif")
         
     body
         div.container-fluid#content
-            section#homeSection(data-color="#42ff8e"): include home
+            //-data-color="#42ff8e"/* data-secondary-color="#ffa8e8"*/
+            section#homeSection(data-color="#ffa8e8" data-secondary-color="#2eff8c")
+                h1.title Ocean Amos
+                p: small#pronouns they/them
 
-            mixin homeButton
-                a.section-link(href="#") Home
+                mixin homeButton
+                    a.section-link(href="#") Home
 
-            section#aboutSection(data-color="#106b3f" data-dark="true")
+                hr
                 include about
-                +homeButton
-
-            section#projectsSection(data-color="#ff70c8")
+                hr
                 include projects
-                +homeButton
+                hr
+                include socialMedia
 
             include projectList
             each project in projects
@@ -28,10 +29,10 @@ html
                     h1.project-title: a(href=project.link)
                         img(src=project.logoURL)
                         span= project.title
+                    br
+                    p!= project.description
                     hr
-                    p= project.description
-                    hr
-                    a.section-link(href="#projects") Back to Projects
+                    +homeButton
 
             section#moneySection(data-color="#ffe600")
                 h1 Ocean's net worth
@@ -44,11 +45,10 @@ html
                 +homeButton
 
             section#emailSection(data-color="#c2f7ff")
-                h5 You can email me at:
+                p You can email me at:
                 -
                     let email = 'ocean@ocean.lol';
                 h2: a(href=`mailto:${email}`)= email
                 +homeButton
             
-        //-script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js")
         script(src="index.js")

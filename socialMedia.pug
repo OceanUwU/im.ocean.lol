@@ -2,5 +2,7 @@
     var socialMedia = [
         ['Email', '#email'],
         ['Github', 'https://github.com/OceanUwU'],
-        ['Spotify', 'https://open.spotify.com/user/21qkyb2od5lnjfgacqoosptly'],
+        ['Spotify', 'https://open.spotify.com/playlist/1fo5bCgF9S8KfqkuzlLf9T'],
     ];
+each link in socialMedia
+    a(href=link[1] title=link[0]): img.social-media-link(src=`media/social-media-logos/${link[0]}.png`)

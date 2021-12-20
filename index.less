@@ -3,17 +3,16 @@
 @import url('projects');
 
 @transitionTime: 0.25s;
+@body-padding: 2em;
 
 html, body {
-    min-height: 100vh;
-}
-
-html {
     margin: 0;
 }
 
 body {
-    padding: 2em 0;
+    @body-padding: 2em;
+    padding: e("@{body-padding} 0");
+    min-height: calc(e("100vh - @{body-padding} - @{body-padding}"));
     background: #00ff00;
     transition: background (@transitionTime * 3) ease-in-out;
     font-family: 'Josefin Sans', sans-serif;
@@ -25,6 +24,7 @@ body {
 
 #content {
     padding: 1em 0.8em;
+    margin: 0 auto;
 
     border-radius: 15px;
     border: 1px solid rgba(0, 0, 0, 0.08);
@@ -45,17 +45,46 @@ section {
     transition-duration: @transitionTime;
 }
 
-h1 {
+.title, .subtitle {
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
     text-decoration: underline;
-    margin-bottom: 0;
+    margin: 0;
 
     text-decoration-skip-ink: none;
 
     @-moz-document url-prefix() {
         text-decoration-skip-ink: all !important;
     }
+}
+
+.title {
+    font-size: 2.5em;
+}
+
+.subtitle {
+    font-size: 1.8em;
+}
+
+p {
+    margin-top: 0;
+}
+
+a {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+hr:not([size]) {
+	height: 1px;
+}
+
+hr {
+	margin: 1rem 0;
+	color: inherit;
+	background-color: currentColor;
+	border: 0;
+	opacity: .08;
 }
 
 #pronouns {
@@ -76,6 +105,7 @@ h1 {
     display: block;
     width: 100%;
     margin: 2px;
+    padding-top: 3px;
 
     border-radius: 7px;
     text-decoration: none;
