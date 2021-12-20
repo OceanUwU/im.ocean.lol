@@ -64,9 +64,3 @@ let hash = location.hash.slice(1);
 if (!document.getElementById(`${hash}Section`))
     hash = '';
 animateSectionChange(hash);
-
-//enable tooltips
-/*var tooltipTriggerList = [].slice.call(document.querySelectorAll('[title]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})*/
