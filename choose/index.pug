@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        title An important decision is awaiting you!
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        link(rel="stylesheet" href="index.css")
+        
+    body
+        div
+            h1#question
+            div#checks: div
+                div#renderer
+
+                svg(width=500 height=96)#buttons
+                    for x in [100, 300]
+                        a.option(href="#" onclick=`choose(${x})`): rect(x=x y=0 width=100 height=96 fill="transparent")
+
+                div#option-titles
+                    span Yes
+                    span No
+                    
+        
+        script(src="https://cdn.jsdelivr.net/npm/poly-decomp@0.2.1/build/decomp.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/matter-js@0.18.0/build/matter.min.js")
+        script(src="index.js")
