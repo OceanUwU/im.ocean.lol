@@ -1,0 +1,14 @@
+doctype html
+html
+    include head
+
+    body
+        #home.d-none
+            img(src="img/banner.png")
+            p We've drawn #[span#question-amount ???] different symbols, but a lot of them aren't real Unicode characters.
+            p Can you discern which are scribbles and which are symbols?
+            hr.w-100
+            button.btn.btn-lg.btn-success(onclick="newQuestion()") Start!
+            //-div(style="padding-bottom:20px;")
+
+        script(src="index.js")

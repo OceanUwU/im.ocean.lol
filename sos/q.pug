@@ -1,0 +1,46 @@
+doctype html
+html
+    include head
+        
+    body
+        #q-container: div.bg-light
+            img#q
+            span.result.d-none#correct
+                svg(width=50 height=50)
+                    polygon(fill="lime" points="42.2604,5.2 18.75,29.298 7.7375,18.8584 0,26.6 18.75,44.7834 50,12.9397")
+                span Correct!
+            span.result.d-none#incorrect
+                svg(width=50 height=50)
+                    polygon(fill="red" points="7.74,0 0,7.74 17.26,25 0,42.26 7.74,50 25,32.74 42.26,50 50,42.26 32.74,25 50,7.74 42.26,0 25,17.26")
+                span Incorrect...
+            p#info.d-none This is just a random scribble.
+        
+        #end.d-none
+            h2 The end!
+            p That's it! No more questions! Your final stats are below.
+            p If you want to try this again, you can reset your progress to try again.
+            button.btn.btn-danger(onclick="reset()") Reset 
+        
+        hr
+
+        #options
+            button.btn.btn-lg.btn-warning(onclick="guess(false)") Scribble
+            span or
+            button.btn.btn-lg.btn-info(onclick="guess(true)") Symbol
+
+        #next.d-none
+            //-p #[span#completed-questions 3]/#[span#total-questions 5] questions answered
+            a.btn.btn-lg.btn-success(href=".") Next
+            hr.w-100
+        
+        #stats.d-none
+            h5 Accuracy: #[span#accuracy ??]%
+            #answers
+                #correct-list
+                    h4 Correct
+                #incorrect-list
+                    h4 Incorrect
+            div(style="padding-bottom:50px;")
+            a(href="https://ocean.lol"): img(width=100 src="https://ocean.lol/media/mark-b.png")
+
+        script(src="q.js")
