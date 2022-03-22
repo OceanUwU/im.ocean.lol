@@ -26,14 +26,13 @@ if (q != 'end') {
 
 
 function guess(guessedSymbol) {
-    let isSymbol = Boolean(questions[q]);
+    let isSymbol = Array.isArray(questions[q]);
     let correct = isSymbol == guessedSymbol;
 
     answers[String(q)] = correct;
     localStorage.symbolQuizAnswers = JSON.stringify(answers);
 
-    if (isSymbol)
-        document.getElementById('info').innerText = `${questions[q][0]} - ${questions[q][1]}`;
+    document.getElementById('info').innerText = isSymbol ? `${questions[q][0]} - ${questions[q][1]}` : `Scribble - ${questions[q]}`;
     document.getElementById('options').classList.add('d-none'); //hide buttons
     document.getElementById('info').classList.remove('d-none'); //show info
     document.getElementById('next').classList.remove('d-none');
@@ -58,10 +57,10 @@ function updateStats() {
         
         let img = document.createElement('img');
         img.src = `img/${i}.png`;
-        img.title = symbol ? symbol : 'Scribble';
+        img.title = Array.isArray(symbol) ? `${symbol[0]} - ${symbol[1]}` : `Scribble - ${Symbol}`;
         img.setAttribute('data-bs-toggle', 'tooltip');
         new bootstrap.Tooltip(img);
-        img.classList.add(`bg-${symbol ? 'info' : 'warning'}`);
+        img.classList.add(`bg-${Array.isArray(symbol) ? 'info' : 'warning'}`);
         console.log(answers, answers[i], i);
         answerContainers[Number(correct)].appendChild(img);
     }
