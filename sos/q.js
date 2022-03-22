@@ -57,7 +57,7 @@ function updateStats() {
         
         let img = document.createElement('img');
         img.src = `img/${i}.png`;
-        img.title = Array.isArray(symbol) ? `${symbol[0]} - ${symbol[1]}` : `Scribble - ${Symbol}`;
+        img.title = Array.isArray(symbol) ? `${symbol[0]} - ${symbol[1]}` : `Scribble - ${symbol}`;
         img.setAttribute('data-bs-toggle', 'tooltip');
         new bootstrap.Tooltip(img);
         img.classList.add(`bg-${Array.isArray(symbol) ? 'info' : 'warning'}`);
