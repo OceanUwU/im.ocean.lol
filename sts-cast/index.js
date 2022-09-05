@@ -122,7 +122,6 @@ function finishDrawing() {
     resizeCanvas.toBlob(smallBlob => {
         resultCanvas.toBlob(blob => {
             cardImages[doing] = [smallBlob, blob, resultCanvas.toDataURL()];
-            console.log(cardImages[doing]);
 
             if (cardsToDo.length > 0)
                 nextCard();
@@ -173,16 +172,16 @@ async function showResult() {
 
 async function zip() {
     var zipper = new JSZip();
-    let toZip = {};
+    var namesUsed = [];
     for (let i in cardImages) {
         let images = cardImages[i];
         let name = cardTable.children().eq(Number(i)).children().eq(0).children().eq(0).val()
             .replaceAll(' ', '');
-        while (name == "" || toZip.hasOwnProperty(name))
+        while (name == "" || namesUsed.includes(name))
             name += "1";
-        console.log(images);
         zipper.file(`${name}.png`, images[0]);
         zipper.file(`${name}_p.png`, images[1]);
+        namesUsed.push(name);
     }
 
     let url = window.URL.createObjectURL(await zipper.generateAsync({type:"blob"}));
