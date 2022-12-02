@@ -1,0 +1,13 @@
+doctype html
+html
+    include head
+
+    body
+        #home.d-none
+            img(src="img/banner.png")
+            p You will be shown #[span#question-amount ???] names of tube/train stations that are either on the TFL map or have been completley made up by us!. 
+            p How many can you identify as real or fake?
+            hr.w-100
+            button.btn.btn-lg.btn-success(onclick="newQuestion()") Start!
+
+        script(src="index.js")
