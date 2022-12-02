@@ -42,7 +42,7 @@ var questions = [
 ].sort((a,b)=>a[1].localeCompare(b[1]));
 
 var answers = {};
-if (localStorage.hasOwnProperty('symbolQuizAnswers'))
-    answers = JSON.parse(localStorage.symbolQuizAnswers); //load save
+if (localStorage.hasOwnProperty('stationQuizAnswers'))
+    answers = JSON.parse(localStorage.stationQuizAnswers); //load save
 else
-    localStorage.symbolQuizAnswers = '{}'; //if no save, create a new one
+    localStorage.stationQuizAnswers = '{}'; //if no save, create a new one

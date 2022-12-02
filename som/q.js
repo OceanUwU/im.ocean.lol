@@ -29,7 +29,7 @@ function guess(guessedSymbol) {
     let correct = isSymbol == guessedSymbol;
 
     answers[String(q)] = correct;
-    localStorage.symbolQuizAnswers = JSON.stringify(answers);
+    localStorage.stationQuizAnswers = JSON.stringify(answers);
 
     document.getElementById('info').innerHTML = isSymbol ? `This is a real tube station - ${questions[q][2]}` : `This is fake! - ${questions[q][2]}`;
     document.getElementById('options').classList.add('d-none'); //hide buttons
@@ -71,6 +71,6 @@ function updateStats() {
 }
 
 function reset() {
-    delete localStorage.symbolQuizAnswers;
+    delete localStorage.stationQuizAnswers;
     window.location.replace('.');
 }
