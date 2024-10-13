@@ -33,18 +33,15 @@ $('#penSizeIndicator').text(penSize.val());
 function loadStrings() {
     let cards = [];
     try {
-        cards = [...cards, ...Object.values(JSON.parse($('#cardStrings').val())).map(i => [
-            i.NAME,
-            i.DESCRIPTION
-                .replaceAll('!D!', '???')
-                .replaceAll('!B!', '???')
-                .replaceAll('!M!', '???')
-                .replaceAll('${ModID}:', '')
-                .replaceAll('_', ' ')
-                .replaceAll(' NL ', '\n')
-                .replaceAll('*', ''),
-            i.TYPE,
-        ])];
+        let data = JSON.parse($('#cardStrings').val());
+        for (i in data) {
+            cards.push([
+                data[i].NAME,
+                data[i].DESCRIPTION.replaceAll(' NL ', '\n'),
+                data[i].TYPE,
+                i.includes(':') ? i.slice(i.indexOf(':')+1) : i
+            ]);
+        }
     } catch(e) {
         console.error(e);
         cards.push(["", ""]);
@@ -54,6 +51,7 @@ function loadStrings() {
         let row = $('#cardTableRowTemplate').clone();
         row.removeAttr('id');
         row.removeAttr('class');
+        row.attr('cardid', i[3]);
         row.children().eq(0).children().eq(0).val(i[0]);
         row.children().eq(2).children().eq(0).val(i[1]);
         if (['a', 's', 'p'].includes(i[2]))
@@ -167,7 +165,7 @@ async function showResult() {
     $('#result').removeClass('d-none');
     let imageBank = $('#cardImages');
     for (let i in cardImages)
-        imageBank.append($(`<div><h4>${cardTable.children().eq(Number(i)).children().eq(0).children().eq(0).val()}</h4><img src="${cardImages[i][2]}" /></div>`));
+        imageBank.append($(`<div><h4 cardid="${cardTable.children().eq(Number(i)).attr('cardid')}">${cardTable.children().eq(Number(i)).children().eq(0).children().eq(0).val()}</h4><img src="${cardImages[i][2]}" /></div>`));
 }
 
 async function zip() {
@@ -175,7 +173,7 @@ async function zip() {
     var namesUsed = [];
     for (let i in cardImages) {
         let images = cardImages[i];
-        let name = cardTable.children().eq(Number(i)).children().eq(0).children().eq(0).val()
+        let name = $('#cardImages').children().eq(0).children().eq(0).attr('cardid')
             .replaceAll(' ', '');
         while (name == "" || namesUsed.includes(name))
             name += "1";
