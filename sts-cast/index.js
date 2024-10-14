@@ -195,6 +195,10 @@ async function zip() {
 window.addEventListener('mousedown', ev => mousedown = true);
 window.addEventListener('mouseup', ev => {mousedown = false; lining = false;});
 window.addEventListener('mousemove', ev => {if (resultCanvas != undefined) mousepos = [ev.clientX - resultCanvas.offsetLeft, ev.clientY - resultCanvas.offsetTop]});
+window.addEventListener('touchstart', ev => mousedown = true);
+window.addEventListener('touchend', ev => {mousedown = false; lining = false;});
+window.addEventListener('touchcancel', ev => {mousedown = false; lining = false;});
+window.addEventListener('touchmove', ev => {if (resultCanvas != undefined) mousepos = [ev.touches[0].clientX - resultCanvas.offsetLeft, ev.touches[0].clientY - resultCanvas.offsetTop]});
 
 $(window).bind('beforeunload', ev => {
     if($('#step-one').hasClass('d-none')){
