@@ -173,7 +173,7 @@ async function zip() {
     var namesUsed = [];
     for (let i in cardImages) {
         let images = cardImages[i];
-        let name = $('#cardImages').children().eq(0).children().eq(0).attr('cardid')
+        let name = $('#cardImages').children().eq(i).children().eq(0).attr('cardid')
             .replaceAll(' ', '');
         while (name == "" || namesUsed.includes(name))
             name += "1";
