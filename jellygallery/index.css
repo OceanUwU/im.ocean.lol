@@ -1,0 +1,95 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.imag {
+    width: 7.5em;
+    height: 7.5em;
+    border: 1px solid #0000003f;
+    border-radius: 1em;
+}
+
+.imag>img {
+    width: 90%;
+    height: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    object-fit: cover;
+    transition: all 0.2s;
+}
+
+.imag>img:hover {
+    width: 100%;
+    height: 100%;
+    margin-top: 0%;
+    margin-left: 0%;
+    object-fit: cover;
+}
+
+#popup {
+    background: #000000af;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+#imag-container {
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: hidden;
+}
+
+#img-big {
+    width: 90%;
+    max-width: 90%;
+    height: 90%;
+    max-height: 90%;
+    margin: 5% 5%;
+    object-fit: contain;
+    user-select: none;
+    image-rendering: pixelated;
+}
+
+#title-container-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#title-container {
+    background-color: white;
+    display: flex;
+    max-width: 50%;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 2em;
+    border-radius: 10px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#title {
+    font-size: 2em;
+}
+
+#author {}
+
+#comment {
+    opacity: 50%;
+}
