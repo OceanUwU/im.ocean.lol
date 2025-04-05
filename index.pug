@@ -1,0 +1,53 @@
+doctype html
+html
+    head
+        title Ocean's website
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        link(rel="stylesheet" href="index.css")
+        link(rel="icon" href="icon.gif")
+        
+    body
+        div.container-fluid#content
+            section#homeSection(data-color="#ffa8e8" data-secondary-color="#2eff8c")
+                h1.title Ocean Amos
+                p: small#pronouns they/them
+
+                mixin homeButton
+                    a.section-link(href="#") Home
+
+                hr
+                include about
+                hr
+                include projects
+                hr
+                include socialMedia
+
+            include projectList
+            each project in projects
+                section(id=`${project.name}Section` data-color=project.color data-secondary-color=project.secondaryColor data-dark=String(project.dark))
+                    h1.project-title: a(href=project.link)
+                        img(src=project.logoURL)
+                        span= project.title
+                    br
+                    p!= project.description
+                    hr
+                    +homeButton
+
+            section#moneySection(data-color="#ffe600")
+                h1 Ocean's net worth
+                p £100
+                +homeButton
+
+            section#moneyrealSection(data-color="#ffb300")
+                h1 Ocean's net worth (real)
+                p £200
+                +homeButton
+
+            section#emailSection(data-color="#c2f7ff")
+                p You can email me at:
+                -
+                    let email = 'ocean@ocean.lol';
+                h2: a(href=`mailto:${email}`)= email
+                +homeButton
+            
+        script(src="index.js")

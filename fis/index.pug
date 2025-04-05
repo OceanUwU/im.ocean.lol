@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+
+        <title>Free Information Survey</title>
+        <link rel="icon" href="icon.png" />
+        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="modal.css" />
+    </head>
+
+    <body>
+        <div class="display-slider" id="slider">
+            <div class="display-box" id="question">
+                <h3>Do you think information should be free?</h3>
+                <button onclick="choose(0)">Yes!!</button>
+                <button onclick="choose(1)">No, I'm stupid.</button>
+            </div>
+
+            <div class="display-box hidden" id="details">
+                <h4>Great! In that case, you should be happy to answer this question.</h4>
+                <h3>What are your PayPal login details?</h3>
+                <input type="text" placeholder="E-mail">
+                <input type="text" placeholder="Password">
+                <p><i>Note: password is not hidden because information should be free.</i></p>
+                <button onclick="submit()">Continue</button>
+            </div>
+
+            <div class="display-box hidden" id="finish">
+                <h3>Thanks for answering our survey!</h3>
+                <p>We will be using the funds in your PayPal account to help our cause, by bribing the government to make information (such as David Cameron's "size") free.</p>
+                <p><small><i>This "experience" was made by <a href="https://ocean.lol">Ocean</a>.</i></small></p>
+            </div>
+
+            <div class="display-box hidden" id="fail">
+                <h4>Your score: 0/1 (0%)</h4>
+                <span id="grade">
+                    <h2>Grade:</h2>
+                    <span id="grade-images">
+                        <img src="grade.png" id="letter">
+                        <img src="stamp.png" id="stamp">
+                    </span>
+                </span>
+                <button onclick="retry()">Try again?</button>
+            </div>
+        </div>
+
+        <div id="warning" class="modal-window">
+            <div>
+                <a href="#details" title="Close" class="modal-close">Close</a>
+                <h1>Nope.</h1>
+                <p>You said it yourself, information should be free.</p>
+                <p><b>Tell us your PayPal login details.</b></p>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

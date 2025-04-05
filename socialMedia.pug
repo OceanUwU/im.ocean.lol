@@ -1,0 +1,9 @@
+-
+    var socialMedia = [
+        ['Email', '#email'],
+        ['Github', 'https://github.com/OceanUwU'],
+        ['Discord', 'https://discord.gg/kAXP34MspS'],
+        ['Spotify', 'https://open.spotify.com/playlist/1fo5bCgF9S8KfqkuzlLf9T'],
+    ];
+each link in socialMedia
+    a(href=link[1] target=link[1].startsWith('#')?'':'_blank' title=link[0]): img.social-media-link(src=`media/social-media-logos/${link[0]}.png`)

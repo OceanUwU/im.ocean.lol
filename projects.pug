@@ -1,0 +1,8 @@
+h2.subtitle My projects
+p Things I made or worked on
+
+include projectList
+div.projects
+    each project in projects
+        a(href=`#${project.name}` title=project.title)
+            img(src=project.logoURL)

@@ -1,0 +1,55 @@
+.centred,
+#setup,
+#step-two,
+#cardImages div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+hr {
+  width: 98%;
+}
+#setup {
+  width: 100%;
+  padding-top: 10px;
+}
+#setup h1 > img {
+  height: 44px;
+  padding-bottom: 5px;
+  margin-right: 10px;
+}
+p {
+  text-align: center;
+}
+#cardStrings {
+  width: 200px;
+  margin-bottom: 20px;
+}
+.table {
+  width: 95vw;
+}
+#step-two .btn-primary {
+  margin-bottom: 70px;
+}
+#step-two [type="number"] {
+  width: 100px;
+}
+#step-two .btn-success {
+  margin-bottom: 50px;
+}
+#drawing {
+  margin-top: 16px;
+  margin-left: 16px;
+}
+#controls {
+  margin-top: 20px;
+}
+canvas {
+  border: 1px solid #0707074f;
+}
+#cardImages div {
+  margin-bottom: 16px;
+}
+#cardImages div img {
+  width: 250px;
+}

@@ -1,0 +1,61 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+body > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#checks {
+    display: flex;
+    justify-content: center;
+
+    > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+        max-width: 100vw;
+
+        > svg > a {
+            z-index: 100;
+        }
+    }
+}
+
+#buttons {
+    margin-top: -96px;
+    margin-bottom: 10px;
+    z-index: 100;
+}
+
+#renderer {
+    line-height: 0;
+
+    :first-child {
+        margin-bottom: -96px;
+    }
+}
+
+#option-titles {
+    width: 400px;
+
+    span {
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        font-size: 25px;
+    }
+}

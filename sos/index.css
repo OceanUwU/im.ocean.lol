@@ -1,0 +1,87 @@
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 10px;
+}
+#home img {
+  width: 550px;
+  margin-bottom: 4px;
+  max-width: 100%;
+}
+#q-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#q-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: grey;
+  border-radius: 40px;
+  margin: 10px;
+}
+#q-container div #q {
+  max-width: 100%;
+}
+#q-container div .result {
+  display: flex;
+  align-items: center;
+}
+#q-container div .result svg {
+  margin-right: 10px;
+}
+#q-container div p {
+  font-size: 1.5em;
+  padding: 0 10px;
+}
+#options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 250px;
+  margin: auto;
+}
+#next {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+#stats #answers {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  padding: 0 10px;
+}
+#stats #answers div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  border-radius: 10px;
+  background-color: lightgrey;
+  margin-top: 20px;
+}
+#stats #answers div img {
+  border-radius: 10px;
+  width: 85%;
+  margin-bottom: 10px;
+}
+#end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}

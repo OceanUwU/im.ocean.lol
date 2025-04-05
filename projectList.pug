@@ -1,0 +1,278 @@
+-
+    var projects = [
+        {
+            title: 'CurvyBirdie',
+            name: 'curvybirdie',
+            description: 'Don\'t touch the spikes <i>(or ever try to draw parallels between this game and any other)</i>.',
+            link: 'https://oceanuwu.itch.io/curvybirdie',
+            color: '#008f7f',
+            secondaryColor: '#e3a612',
+            dark: false,
+        },
+
+        {
+            title: '8connect4',
+            name: '8connect4',
+            description: 'Connect 4 played against multiple opponents at once.<br>The moves you make are duplicated across multiple boards.',
+            link: 'https://8c4.ocean.lol',
+            color: '#050505',
+            secondaryColor: '#ff00ff',
+            dark: true,
+        },
+
+        {
+            title: 'Clueless Captains Online',
+            name: 'cluelesscaptains',
+            description: 'A social deduction game where the Sea Monsters are trying to sink the Pirates\' ship before they can steal all their treasure.',
+            link: 'https://cc.ocean.lol',
+            color: '#feffc7',
+            secondaryColor: '#00beff',
+            dark: false,
+        },
+
+        {
+            title: 'Geminer (beta)',
+            name: 'geminer',
+            description: 'Mine minerals and use them as pixels in drawings.',
+            link: 'https://geminer-beta.ocean.lol',
+            color: '#ff564a',
+            secondaryColor: '#d1271b',
+            dark: false,
+        },
+
+        {
+            title: 'Collaborative Tier Lists',
+            name: 'ctl',
+            description: 'CTL lets anyone do a tier list, then the average tiers of each item are shown as a tier list.',
+            link: 'https://ctl.ocean.lol',
+            color: '#e8e8e8',
+            secondaryColor: '#343a40',
+            dark: true,
+        },
+
+        {
+            title: 'PlotTweening',
+            name: 'pt',
+            description: 'Form a story by drawing what happens inbetween other drawings.',
+            link: 'https://tweening.ocean.lol',
+            color: '#bfffd0',
+            dark: false,
+        },
+
+        {
+            title: 'RateTune',
+            name: 'ratetune',
+            description: 'A tool where a group of people can rate each other\'s music.',
+            link: 'https://ratetune.ocean.lol',
+            color: '#002b36',
+            secondaryColor: '#073642',
+            dark: true,
+        },
+        
+        {
+            title: 'Fairy Chess',
+            name: 'chess',
+            description: 'Quickly create a custom chess board with fairy pieces and challenge a friend to play on it against you.',
+            link: 'https://chess.ocean.lol',
+            color: '#ffe0ff',
+            dark: false,
+        },
+
+        {
+            title: 'Open Source Stories',
+            name: 'oss',
+            description: 'A long-term game of telephone.',
+            link: 'https://oss.ocean.lol',
+            color: '#89b66f',
+            dark: false,
+        },
+
+        {
+            title: 'Slaytabase',
+            name: 'slaytabase',
+            description: 'A discord bot for slay the spire servers.',
+            link: 'https://slay.ocean.lol',
+            color: '#09ff00',
+            dark: false,
+        },
+
+        {
+            title: 'Battlebot',
+            name: 'battlebot',
+            description: 'A discord bot based on tank turn tactics.',
+            link: 'https://battlebot.ocean.lol',
+            color: '#6b069c',
+            dark: true,
+        },
+
+        {
+            title: 'Wikilimination',
+            name: 'wikilim',
+            description: 'Guess who but with random Wikipedia articles.',
+            link: 'https://wikilim.ocean.lol',
+            color: '#c3e5e9',
+            secondaryColor: '#dae7ff',
+            dark: false,
+        },
+
+        {
+            title: 'Sodi and the Stormy Tower of DOOM!!!',
+            name: 'soditower',
+            description: 'A PICO-8 platformer.',
+            link: 'https://www.lexaloffle.com/bbs/?tid=51615',
+            color: '#ff77a8',
+            dark: false,
+        },
+
+        {
+            title: 'Sodi Finds a Gun.',
+            name: 'sodigun',
+            description: 'A top-down shooter made with Godot.',
+            link: 'https://open.ocean.lol/sfg/sfg.html',
+            color: '#ff90dc',
+            dark: false,
+        },
+
+        {
+            title: 'The Floob Experiment',
+            name: 'floob',
+            description: 'Floobs were a failed attempt to create a synthetic pet.<br>Attempt to understand one by taking care of them!<br><br><b>We had no idea how boring this was going to be.<br>Try this if you want, but you\'ll be super confused and all the while be having no fun at all.</b>',
+            link: 'https://floob.ocean.lol',
+            color: '#9f00ff',
+            dark: false,
+        },
+
+        {
+            title: 'FloobSweeper',
+            name: 'floobsweeper',
+            description: 'Fourth Godot practice game. Minesweeper but Floob.',
+            link: 'https://oceanuwu.itch.io/floobsweeper',
+            color: '#ededed',
+            secondaryColor: '#f5e81e',
+            dark: false,
+        },
+
+        {
+            title: 'FloobSnake',
+            name: 'floob-snake',
+            description: 'Second Godot practice game. Snake but Floob.',
+            link: 'https://oceanuwu.itch.io/floobsnake',
+            color: '#a7ea21',
+            secondaryColor: '#ff79ed',
+            dark: false,
+        },
+
+        {
+            title: 'Flooby Bird',
+            name: 'flooby-bird',
+            description: 'First Godot practice game. Flappy bird but Floob.',
+            link: 'https://oceanuwu.itch.io/flooby-bird',
+            color: '#515151',
+            secondaryColor: '#25c4da',
+            dark: false,
+        },
+
+        {
+            title: 'HexaFloobs',
+            name: 'hexafloobs',
+            description: 'Third Godot practice game. Flippy Bit And The Attack Of The Hexadecimals From Base 16 but Floob.',
+            link: 'https://oceanuwu.itch.io/hexafloobs',
+            color: '#0b1f42',
+            secondaryColor: '#6d1212',
+            dark: true,
+        },
+
+        {
+            title: 'Scribble or Symbol?',
+            name: 'sos',
+            description: 'Discern fake Unicode symbols from real ones.',
+            link: 'sos/',
+            color: '#ffc107',
+            secondaryColor: '#0dcaf0',
+            dark: false,
+        },
+
+        {
+            title: 'Guess What?',
+            name: 'guesswhat',
+            description: 'Guess who but with AI-generated pictures of faces .',
+            link: 'https://guesswhat.ocean.lol',
+            color: '#e3a4ff',
+            secondaryColor: '#dd3939',
+            dark: false,
+        },
+
+        {
+            title: 'space-sim',
+            name: 'space-sim',
+            description: 'fly rouned in a space ship lol',
+            link: 'http://gh.ss.ocean.lol',
+            color: '#141414',
+            dark: true,
+        },
+
+        /*{
+            title: 'Identificator',
+            name: 'identificator',
+            description: 'An authorization service made to be super fast and easy to develop with (at the expense of user privacy).',
+            link: 'https://id.ocean.lol',
+            color: '#e8e8e8',
+            dark: false,
+        },
+
+        {
+            title: 'RPS-101 online',
+            name: 'rps101online',
+            description: 'Basically a matchmaking service for rock paper scissors. I was bored, ok?',
+            link: 'https://rps101.ocean.lol',
+            color: '#fcff30',
+            dark: false,
+        },
+
+        {
+            title: 'Low-memory twitter',
+            name: 'lmt',
+            description: 'A twitter clone where only one tweet can be stored at a time.',
+            link: 'https://lmt.ocean.lol',
+            color: '#6324b6',
+            secondaryColor: '#6c757d',
+            dark: true,
+        },
+
+        {
+            title: 'shadyurls',
+            name: 'shadyurls',
+            description: 'Create web pages which have really shady URLs.',
+            link: 'https://shadyurls.ocean.lol',
+            color: '#e8e8e8',
+            dark: false,
+        },
+
+        {
+            title: 'Collaborative Counting',
+            name: '',
+            description: '',
+            link: 'https://count.ocean.lol'
+        },*/
+
+        {
+            title: 'hexer',
+            name: 'hexer',
+            description: 'A Discord bot which gives every user their own role and lets them customise its color and name.',
+            link: 'https://hexer.ocean.lol',
+            color: '#4d4d4d',
+            dark: true,
+        },
+
+        {
+            title: 'Forceful checkboxes',
+            name: 'checkboxes',
+            description: 'The decisions you make in life are above you.<br><a href="https://www.reddit.com/r/badUIbattles/comments/s8u3v6" target="_blank">For r/badUIbattles.</a>',
+            link: '/choose/?q=RGVsZXRlIHlvdXIgYWNjb3VudD8=',
+            color: '#eeeeee',
+            dark: false,
+        },
+    ];
+
+    for (let project of projects)
+        project.logoURL = `media/project-logos/${project.name}.png`;

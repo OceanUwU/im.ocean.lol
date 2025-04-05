@@ -1,0 +1,33 @@
+.projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    a {
+        padding: 2px;
+        img {
+            width: 60px;
+        }
+    }
+}
+
+.project-title {
+    &:extend(.title);
+
+    margin-bottom: 8px;
+
+    a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    
+        //text-decoration: none;
+        
+        img {
+            margin-right: 0.2em;
+            height: 40px;
+        }
+    }
+}

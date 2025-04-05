@@ -1,0 +1,48 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "dev",
+            "dependsOn": [
+                "devPug",
+                "devLess",
+                "serve"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "devPug",
+            "type": "shell",
+            "command": "pug -w ./",
+            "presentation": {
+                "group": "dev"
+            }
+        },
+        {
+            "label": "devLess",
+            "type": "shell",
+            "command": "less-watch-compiler --less-args clean-css ./ ./",
+            "presentation": {
+                "group": "dev"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "serve",
+            "type": "shell",
+            "command": "serve",
+            "presentation": {
+                "group": "dev"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "build",
+            "args": [
+                "build"
+            ],
+            "type": "shell",
+            "command": "pug ./ && for file in *.less; do lessc -x --strict-imports $file `basename $file`.css ; done"
+        }
+    ]
+}

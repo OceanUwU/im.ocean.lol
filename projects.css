@@ -1,0 +1,25 @@
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.projects a {
+  padding: 2px;
+}
+.projects a img {
+  width: 60px;
+}
+.project-title {
+  margin-bottom: 8px;
+}
+.project-title a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.project-title a img {
+  margin-right: 0.2em;
+  height: 40px;
+}

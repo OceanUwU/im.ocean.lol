@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.display-slider {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.display-box {
+    min-width: 100vw;
+    min-height: 100vh;
+    background: #75ff9c;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+button {
+    border-radius: 100px;
+    border: 1px solid #00ff48;
+    background: #ffffff;
+
+    transition: 0.2s;
+
+    &:hover {
+        background: #d2ffd2;
+    }
+    
+    &:active {
+        background: #8ee478;
+    }
+}
+
+
+
+input {
+    border-radius: 100px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    border: 2px outset #00ff48;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+#grade {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#grade-images {
+    position: relative;
+}
+
+#letter {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#stamp {
+    position: absolute;
+    left: 60vw;
+    top: 60vw;
+}
